@@ -1,0 +1,25 @@
+{
+  "name": "hw13",
+  "version": "1.0.0",
+  "description": "FriendFinder is a compatibility-based application that takes in results from users' surveys and compares their answers with those from other users.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joycetio/FriendFinder.git"
+  },
+  "author": "Joyce Tio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joycetio/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/joycetio/FriendFinder#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "path": "^0.12.7"
+  }
+}
