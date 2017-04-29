@@ -8,4 +8,8 @@ module.exports = function(app) {
 
 	//api post requests
 	//handles when a user submits a form and submits data to the server. 
+	app.post("/api/friends", function(req, res) {
+		friends.push(req.body);
+		res.json(friends);
+	});
 }
