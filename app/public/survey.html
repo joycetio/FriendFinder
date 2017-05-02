@@ -35,32 +35,19 @@
                 <div class='form-group'>
                     <label for="ques1Ans">Select an Option</label>
                     <select class="form-control" id="ques1Ans">
-                        <option value='1'>1 (Strongly Disagree)</option>
+                        <option value='1' selected='selected'>1 (Strongly Disagree)</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5 (Strongly Agree)</option>
                     </select>
                 </div>
-                <!--       <select data-placeholder="Select an Option" class="chosen-select" tabindex="-1" style="display: none;">
-                    <option value></option>
-                    <option value='1'>1 (Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
-                </select>
-                <div class='chosen-container chosen-container-single'>
-                    <a class='chosen-single chosen-default'>
-                        <span>Select an Option</span>
-                    </a>
-                </div> -->
                 <h3><strong>Question 2<strong></h3>
                 <h4>Generally speaking, you rely more on your experience than your imagination.</h4>
                 <div class='form-group'>
                     <label for="ques2Ans">Select an Option</label>
                     <select class="form-control" id="ques2Ans">
-                        <option value='1'>1 (Strongly Disagree)</option>
+                        <option value='1' selected='selected'>1 (Strongly Disagree)</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
@@ -72,7 +59,7 @@
                 <div class='form-group'>
                     <label for="ques3Ans">Select an Option</label>
                     <select class="form-control" id="ques3Ans">
-                        <option value='1'>1 (Strongly Disagree)</option>
+                        <option value='1' selected='selected'>1 (Strongly Disagree)</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
@@ -84,7 +71,7 @@
                 <div class='form-group'>
                     <label for="ques4Ans">Select an Option</label>
                     <select class="form-control" id="ques4Ans">
-                        <option value='1'>1 (Strongly Disagree)</option>
+                        <option value='1' selected='selected'>1 (Strongly Disagree)</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
@@ -96,7 +83,7 @@
                 <div class='form-group'>
                     <label for="ques5Ans">Select an Option</label>
                     <select class="form-control" id="ques5Ans">
-                        <option value='1'>1 (Strongly Disagree)</option>
+                        <option value='1' selected='selected'>1 (Strongly Disagree)</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
@@ -108,7 +95,7 @@
                 <div class='form-group'>
                     <label for="ques6Ans">Select an Option</label>
                     <select class="form-control" id="ques6Ans">
-                        <option value='1'>1 (Strongly Disagree)</option>
+                        <option value='1' selected='selected'>1 (Strongly Disagree)</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
@@ -120,7 +107,7 @@
                 <div class='form-group'>
                     <label for="ques7Ans">Select an Option</label>
                     <select class="form-control" id="ques7Ans">
-                        <option value='1'>1 (Strongly Disagree)</option>
+                        <option value='1' selected='selected'>1 (Strongly Disagree)</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
@@ -132,7 +119,7 @@
                 <div class='form-group'>
                     <label for="ques8Ans">Select an Option</label>
                     <select class="form-control" id="ques8Ans">
-                        <option value='1'>1 (Strongly Disagree)</option>
+                        <option value='1' selected='selected'>1 (Strongly Disagree)</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
@@ -144,7 +131,7 @@
                 <div class='form-group'>
                     <label for="ques9Ans">Select an Option</label>
                     <select class="form-control" id="ques9Ans">
-                        <option value='1'>1 (Strongly Disagree)</option>
+                        <option value='1' selected='selected'>1 (Strongly Disagree)</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
@@ -156,7 +143,7 @@
                 <div class='form-group'>
                     <label for="ques10Ans">Select an Option</label>
                     <select class="form-control" id="ques10Ans">
-                        <option value='1'>1 (Strongly Disagree)</option>
+                        <option value='1' selected='selected'>1 (Strongly Disagree)</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
@@ -170,7 +157,7 @@
     <hr/>
     <footer class="footer">
         <div class="container">
-            <p><a href="#">API Friends List</a> | <a href="#">GitHub Repo</a></p>
+            <p><a href="/api/friends">API Friends List</a> | <a href="#">GitHub Repo</a></p>
         </div>
     </footer>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -181,14 +168,30 @@
     $(".submitBtn").on("click", function(event) {
         event.preventDefault();
 
+        //gets the answers of the user from survey and stores it in var newFriend
         var newFriend = {
             name: $("#userName").val().trim(),
             photo: $("#userImage").val().trim(),
-            scores: [$("#ques1Ans").val().trim(), $("#ques2Ans").val().trim(), $("#ques3Ans").val().trim(), $("#ques4Ans").val().trim(), $("#ques5Ans").val().trim(), $("#ques6Ans").val().trim(), $("#ques7Ans").val().trim(), $("#ques8Ans").val().trim(), $("#ques9Ans").val().trim(), $("#ques10Ans").val().trim(),]
+            scores: [$("#ques1Ans").val().trim(), $("#ques2Ans").val().trim(), $("#ques3Ans").val().trim(), $("#ques4Ans").val().trim(), $("#ques5Ans").val().trim(), $("#ques6Ans").val().trim(), $("#ques7Ans").val().trim(), $("#ques8Ans").val().trim(), $("#ques9Ans").val().trim(), $("#ques10Ans").val().trim()]
         };
 
         console.log(newFriend);
-    })
+
+        // post function that gives the desired URL the object we want to send back 
+        $.post("/api/friends", newFriend, function(data) {
+            console.log("You made a new friend!");
+        });
+
+        //clears the form after submit 
+        $("#userName").val("");
+        $("#userImage").val("");
+
+        //resets options in form 
+        $(".form-group option").prop('selected', function() {
+            return this.defaultSelected;
+        });
+
+    });
     </script>
 </body>
 
